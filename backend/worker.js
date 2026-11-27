@@ -23,7 +23,9 @@ async function creatorFor(req, env) {
 }
 export default {
   async fetch(req, env) {
-    const origin = req.headers.get("origin") || "*";
+    const origin = req.headers.get("origin") || "null";
+    const allowed = (env.ALLOWED_ORIGINS || "").split(",").map(x => x.trim()).filter(Boolean);
+    if (allowed.length && origin !== "null" && !allowed.includes(origin)) return json({error:"Origin not allowed"},403);
     if (req.method === "OPTIONS") return cors(new Response(null, {status:204}), origin);
     const url = new URL(req.url), path = url.pathname;
     try {
