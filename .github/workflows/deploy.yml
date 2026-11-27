@@ -1,5 +1,7 @@
 name: Deploy Heart Lab preview
 
+# Preview deployment workflow revision: 2026-11-27
+
 on:
   push:
     branches:
