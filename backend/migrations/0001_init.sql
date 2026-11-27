@@ -1,0 +1,1 @@
+-- Apply backend/schema.sql to the D1 database before deploying the Worker.
