@@ -7,6 +7,7 @@ on:
       - heart-tool-v1
     paths:
       - 'index.html'
+      - 'tool-share.js'
       - 'share-v2.js'
       - '.github/workflows/deploy.yml'
   workflow_dispatch:
