@@ -1,11 +1,10 @@
 name: Deploy Heart Lab preview
 
-# Preview deployment workflow revision: 2026-11-27
-
 on:
   push:
     branches:
       - heart-lab-v1
+      - heart-tool-v1
     paths:
       - 'index.html'
       - 'share-v2.js'
