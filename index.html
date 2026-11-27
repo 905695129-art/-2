@@ -88,4 +88,5 @@ function renderDashboard(){$("statWorks").textContent="1";$("statOrders").textCo
 function toast(s){$("toast").textContent=s;$("toast").classList.add("show");setTimeout(()=>$("toast").classList.remove("show"),2200);}
 $("title").value=localStorage.getItem("hl_tool_title")||$("title").value;$("intro").value=localStorage.getItem("hl_tool_intro")||$("intro").value;$("recipient").value=localStorage.getItem("hl_tool_recipient")||"";renderLevels();renderPreview();renderOrders();renderDashboard();
 </script>
+<script src="./tool-share.js"></script>
 </body></html>
